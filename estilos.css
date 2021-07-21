@@ -763,6 +763,60 @@ footer{
         padding: 10px;
     }
     
+    #titulo h1 {
+        font-size: 30px;
+    }
+       
+    #contenido h1:first-child {
+        font-size: 25px;
+    }
+    #contenido h1 {
+        font-size: 25px;
+    }
+    #contorno p {
+        font-size: 15px;
+    }
+    #contenido p{
+        font-size: 15px;
+
+    }
+    #contenido p{
+        font-size: 15px;
+
+    }
+    #contorno h1 {
+        font-size: 25px;
+    }
+    #nuestras h1 {
+        font-size: 25px;
+    }
+    #nuestras p {
+        font-size: 15px;
+    }
+    #showiz h1 {
+        font-size: 25px;
+    }
+    #showiz p {
+        font-size: 15px;
+    }
+    #docentes h1:first-child {
+        font-size: 25px;
+    }
+    #docentes h1:last-child {
+        font-size: 25px;
+    }
+    #contacto h1 {
+        font-size: 20px;
+    }
+    .par p{
+        font-size: 12px;
+    }
+    #seguir h1 {
+        font-size: 20px;
+    }
+    #abajo p{
+        font-size: 12px;
+    }  
 }
 @media screen and (max-width: 400px){
     #sombra{
