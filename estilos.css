@@ -646,58 +646,58 @@ footer{
 }
 @media screen and (max-width: 770px){
     #titulo h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
        
     #contenido h1:first-child {
-        font-size: 30px;
+        font-size: 25px;
     }
     #contenido h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
     #contorno p {
-        font-size: 20px;
+        font-size: 15px;
     }
     #contenido p{
-        font-size: 20px;
+        font-size: 15px;
 
     }
     #contenido p{
-        font-size: 22px;
+        font-size: 19px;
 
     }
     #contorno h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
     #nuestras h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
     #nuestras p {
-        font-size: 20px;
-    }
-    #showiz h1 {
-        font-size: 30px;
-    }
-    #showiz p {
-        font-size: 20px;
-    }
-    #docentes h1:first-child {
-        font-size: 30px;
-    }
-    #docentes h1:last-child {
-        font-size: 30px;
-    }
-    #contacto h1 {
-        font-size: 25px;
-    }
-    .par p{
         font-size: 15px;
     }
-    #seguir h1 {
+    #showiz h1 {
         font-size: 25px;
     }
+    #showiz p {
+        font-size: 25px;
+    }
+    #docentes h1:first-child {
+        font-size: 25px;
+    }
+    #docentes h1:last-child {
+        font-size: 25px;
+    }
+    #contacto h1 {
+        font-size: 20px;
+    }
+    .par p{
+        font-size: 12px;
+    }
+    #seguir h1 {
+        font-size: 20px;
+    }
     #abajo p{
-        font-size: 14px;
+        font-size: 12px;
     }  
     #sombra{
         width: 300px;
@@ -759,7 +759,7 @@ footer{
         margin-top: 2%;
     }
     a{
-        font-size: 15px;
+        font-size: 10px;
         padding: 10px;
     }
     
