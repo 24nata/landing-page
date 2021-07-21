@@ -1,0 +1,805 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#cuda{
+    width: 100% ;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+}
+
+.inicio a:hover{
+    background-color: rgb(12, 12, 36);
+    color: rgb(255, 255, 255);
+}
+
+#galeria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container-all{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 8.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #fff;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+}
+
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+
+    66%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    100%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
+
+#titulo{
+    width: 100%;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+
+#titulo h1{
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+   
+}
+#titulo button{
+    cursor: pointer;
+    padding: 10px 90px 10px 90px;
+    font-size: 16px;
+    border: 1px solid rgb(192, 202, 238);
+    text-transform: uppercase;
+    display: inline-block;
+    color:  rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.171);
+}
+
+#titulo button:hover{
+    background-color: rgb(192, 202, 238);
+    color: rgb(0, 0, 0);
+
+}
+
+.historia{
+    width: 100%;
+    background-color: rgb(226, 225, 225);
+    display: flex;
+    justify-content: space-around;
+
+}
+#lado{
+    width: 50%;
+    margin-bottom: 2%;
+}
+
+#sombra{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(12, 12, 36);
+    padding: 30px 39px;
+    margin: 2% 0% 2% 10%;
+}
+
+#foto{
+    width: 500px;
+    height: 500px;
+    background-image: url(./img/baile.jpg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+#contenido{
+    width:50%;
+    margin: 20px 50px 20px 0px;
+    color: black;
+    text-align: center;
+}
+#contenido h1:first-child{
+    font-family: 'League Script', cursive;
+    font-size: 40px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+#contenido h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 90;
+    font-size: 40px;
+    margin-top: -10px;
+}
+#contenido p{
+    font-size: 24px;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+
+#contenido button{
+    cursor: pointer;
+    padding: 10px 90px 10px 90px;
+    border: 0px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    
+
+}
+#contenido button:hover{
+    background-color: rgb(192, 202, 238);
+    color: rgb(0, 0, 0);
+
+}
+
+.informacion{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    top: 0;
+    background-image:url(./img/im.5.jpg) ;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+
+}   
+
+#text{
+    margin-top: 15%;
+    padding: 2% 2%;
+    width: 60%;
+    height: 380px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        
+} 
+#contorno{
+    display: flex;
+}
+
+#contorno h1{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+#contorno p{
+    font-size: 24px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+#contorno p:last-child{
+    text-align: center;
+}
+
+#opciones{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color:rgb(226, 225, 225);
+}
+#nuestras{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nuestras h1{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+#nuestras p{
+    font-size: 24px;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    margin-top: -10px;
+}
+
+#lasclases{
+    position: relative;
+    width: 100%;
+    padding: 3% 15%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    
+}
+.losbaile{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    background-color:rgb(197, 197, 197);
+
+}
+.losbaile a img{
+    border-radius: 2%;
+}
+
+.losbaile h1:hover{
+    color: white;
+}
+
+.losbaile a:hover{
+    background-color: rgb(12, 12, 36);
+}
+
+.shows{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+#showiz{
+    width:50%;
+    margin:30px 30px;
+    color: black;
+    text-align: center;
+}
+
+#showiz h1{
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+  
+}
+#showiz p{
+    font-size: 24px;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+#imgshow {
+    width: 50%;
+    height: 600px;
+    background-image: url(./img/shows.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+
+}
+  
+
+.servicios{
+    position: relative;
+    width: 100%;
+    background-color:rgb(226, 225, 225);
+
+}
+#docentes h1:first-child{
+    font-family: 'League Script', cursive;
+    font-size: 40px;
+    
+}
+    
+#docentes h1:last-child{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 90;
+    margin-top: -10px; 
+    font-size: 40px;
+}
+
+#tres{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#docentes{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.movimiento{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin-top: 3%;
+    background-color:rgb(226, 225, 225);
+}
+.box{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.box img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.box .hover{
+    width: 0%;
+    height: 300px;
+    background-color:  rgba(12, 12, 36, 0.452);
+    position: absolute;
+    left: 50px;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.box h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 90;
+    font-size: 35px;
+    padding: 20px;
+}
+
+.hover a h1{
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.box:hover .hover{
+    width: 75.5%;
+}
+#otros{
+   margin-bottom: 50px;
+}
+#otros button{
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 10px 90px 10px 90px;
+    border: 0px;
+    font-size: 16px;
+    border: 1px solid rgb(0, 0, 0);
+    text-transform: uppercase;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    
+
+}
+#otros button:hover{
+    background-color: rgb(192, 202, 238);
+    color: rgb(0, 0, 0);
+
+}
+
+footer{
+    position: relative;
+    background-color:rgb(12, 12, 36);
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+#primeras{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+#contacto{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.direc{
+  display: flex;
+    
+}
+.icon img{
+    border-radius: 100%;
+}
+#contacto h1{
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 40px;
+}
+.par p{
+    font-size: 22px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    color: white;
+    padding: 5px 0px 0px 10px;
+}
+.par{
+    text-align: center;
+}
+#seguir{
+    margin-top: 2%;
+}
+#seguir h1{
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: white;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+.fin img{
+    border-radius: 100%;
+}
+#icono{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+.fin{
+    padding: 1%;
+}
+#abajo{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    margin: 15px 0px 15px 0px;
+}
+@media screen and (max-width: 1216px){
+    #titulo{
+        top:35%
+    }
+    
+    .historia{
+        width: 100%;
+        flex-direction: column-reverse;
+    
+    }
+    #lado{
+        width: 100%;
+        align-content: center;
+    
+    }   
+    #sombra{
+        margin: 20px 0px 20px 25%;
+    }
+    #foto{
+        margin-left: 2%;
+
+    }
+    
+    #contenido{
+        width:100%;
+        padding: 0% 5%;
+     
+    }
+    
+   
+} 
+
+
+@media screen and (max-width: 990px){
+    #text{
+        width: 70%;
+        height: 410px;
+           
+    } 
+    #contorno{
+        flex-direction: column;
+
+    }
+    .shows{
+        flex-direction: column;
+    }
+    #showiz{
+        width:100%;
+        margin:3% 3% 3% 3%;
+    }
+    
+    #imgshow {
+        width: 100%;
+        height: 400px;
+        background-position: center;
+   
+    }
+    #foto{
+        margin-bottom:5%;
+
+    }
+}
+@media screen and (max-width: 770px){
+    #titulo h1 {
+        font-size: 35px;
+    }
+       
+    #contenido h1:first-child {
+        font-size: 30px;
+    }
+    #contenido h1 {
+        font-size: 30px;
+    }
+    #contorno p {
+        font-size: 20px;
+    }
+    #contenido p{
+        font-size: 20px;
+
+    }
+    #contenido p{
+        font-size: 22px;
+
+    }
+    #contorno h1 {
+        font-size: 30px;
+    }
+    #nuestras h1 {
+        font-size: 30px;
+    }
+    #nuestras p {
+        font-size: 20px;
+    }
+    #showiz h1 {
+        font-size: 30px;
+    }
+    #showiz p {
+        font-size: 20px;
+    }
+    #docentes h1:first-child {
+        font-size: 30px;
+    }
+    #docentes h1:last-child {
+        font-size: 30px;
+    }
+    #contacto h1 {
+        font-size: 25px;
+    }
+    .par p{
+        font-size: 15px;
+    }
+    #seguir h1 {
+        font-size: 25px;
+    }
+    #abajo p{
+        font-size: 14px;
+    }  
+    #sombra{
+        width: 300px;
+        height: 300px;
+        margin-left: 2%;
+        margin: 0px 0px 20px 25%;
+
+    }
+    
+    #foto{
+        width: 300px;
+        height: 300px;
+
+    }
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .header{
+        flex-direction: column;
+    }
+    .movimiento{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 542px){
+    #nuestras{
+        width: 100%;
+    }
+    
+    #lasclases{
+        width: 100%;
+        padding: 3% 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .losbaile{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        width: 220px;        
+  
+    }
+    .losbaile a img{
+        width: 200px;
+        
+    }   
+     #sombra{
+        margin: 0px 0px 50px 15%;
+
+    }
+    #primeras{
+        flex-direction: column;
+    }
+    #icono{
+        margin-top: 2%;
+    }
+    a{
+        font-size: 15px;
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width: 400px){
+    #sombra{
+        margin: 0px 0px 50px 18%;
+
+    }
+    #sombra{
+        width: 160px;
+        height: 160px;
+
+    }
+    #foto{
+        width: 160px;
+        height: 160px;
+
+    }
+    .box{
+        width: 100%;
+    }
+    #titulo {
+        top: 50px;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
